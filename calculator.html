@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Thiago's Basic Calculator</title>
+
+		<!-- Bootstrap 3.3.7 Minified CSS -->
+		<link rel="stylesheet" href="styles/assets/bootstrap.min.css">
+
+		<!-- Calculator CSS -->
+		<link rel="stylesheet" href="styles/calculator.css">
+
+		<!-- AngularJS 1.5.8 Minified -->
+		<script src="scripts/assets/angular.min.js"></script>
+		<script src="scripts/modules/app.js"></script>
+		<script src="scripts/controllers/calculator.js"></script>
+	</head>
+	<body ng-controller="CalculatorController as calculator">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+      		<div class="container">
+		        <div class="navbar-header">
+		          	<a class="navbar-brand" href="">Thiago's Basic Calculator</a>
+		        </div>
+	      	</div>
+	    </nav>
+
+	    <div class="container">
+	      	<div class="body-content">
+		        <h1>An easy to use basic calculator</h1>
+		        <p class="lead">Just use it as a real calculator!</p>
+
+	        	<div class="form-group input-group">
+					<input type="text" ng-model="calculator.displayValue" disabled class="form-control input-lg text-right" title="Come on, it's not possible to type on real calculators LCD screen... Please, use the buttons below ;)">
+			      	<span class="input-group-btn">
+			        	<button ng-click="calculator.start()" class="btn btn-default input-lg" type="button">C</button>
+			      	</span>
+				</div>
+
+		        <div class="jumbotron">
+					<div class="row">
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('7')" class="btn btn-default btn-lg btn-block" type="button">7</button>
+						</div>
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('8')" class="btn btn-default btn-lg btn-block" type="button">8</button>
+						</div>
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('9')" class="btn btn-default btn-lg btn-block" type="button">9</button>
+						</div>
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('+')" class="btn btn-default btn-lg btn-block btn-primary" type="button">+</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('4')" class="btn btn-default btn-lg btn-block" type="button">4</button>
+						</div>
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('5')" class="btn btn-default btn-lg btn-block" type="button">5</button>
+						</div>
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('6')" class="btn btn-default btn-lg btn-block" type="button">6</button>
+						</div>
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('-')" class="btn btn-default btn-lg btn-block btn-primary" type="button">-</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('1')" class="btn btn-default btn-lg btn-block" type="button">1</button>
+						</div>
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('2')" class="btn btn-default btn-lg btn-block" type="button">2</button>
+						</div>
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('3')" class="btn btn-default btn-lg btn-block" type="button">3</button>
+						</div>
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('*')" class="btn btn-default btn-lg btn-block btn-primary" type="button">x</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('0')" class="btn btn-default btn-lg btn-block" type="button">0</button>
+						</div>
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('.')" class="btn btn-default btn-lg btn-block" type="button">.</button>
+						</div>
+						<div class="col-xs-3">
+							<button ng-click="calculator.calculate()" class="btn btn-default btn-lg btn-block btn-success" type="button">=</button>
+						</div>
+						<div class="col-xs-3">
+							<button ng-click="calculator.pressButton('/')" class="btn btn-default btn-lg btn-block btn-primary" type="button">÷</button>
+						</div>
+					</div>
+		        </div>
+
+		        <h6>Made with ♥ by Thiago for Cotuto Web Developer Challenge</h6>
+	      	</div>
+	    </div>
+	</body>
+</html>
